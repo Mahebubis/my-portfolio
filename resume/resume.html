@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Maheboob Khan — Résumé</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 11mm 12mm 10mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Geist', 'Segoe UI', sans-serif; font-size: 9.3pt; line-height: 1.38; color: #1d1b18; }
+  a { color: inherit; text-decoration: none; border-bottom: 0.5pt solid #b9a07a; }
+  header { text-align: center; margin-bottom: 6pt; }
+  h1 { margin: 0; font-size: 20pt; letter-spacing: 0.06em; font-weight: 700; }
+  .tag { color: #6a5532; font-size: 9.5pt; margin-top: 1pt; }
+  .contact { color: #555; font-size: 8.6pt; margin-top: 3pt; display: flex; justify-content: center; flex-wrap: wrap; gap: 3pt 12pt; }
+  h2 { font-size: 10.5pt; color: #7a5424; margin: 8pt 0 3pt; padding-bottom: 2pt; border-bottom: 0.6pt solid #cdbb9c; text-transform: uppercase; letter-spacing: 0.08em; }
+  p { margin: 0; }
+  .skills div { margin: 1pt 0; }
+  b { font-weight: 600; }
+  .role { display: flex; justify-content: space-between; margin-top: 4pt; }
+  .role .co { color: #7a5424; font-weight: 600; }
+  .when, .sub { color: #666; font-size: 8.6pt; }
+  ul { margin: 2pt 0 0; padding-left: 12pt; }
+  li { margin: 1.2pt 0; }
+  li::marker { color: #9a6b2f; }
+  .edu { display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header>
+  <h1>KHAN MAHEBOOB</h1>
+  <div class="tag">Full-Stack Engineer · React · PHP · Go · Node.js · React Native</div>
+  <div class="contact">
+    <span>Pune, Maharashtra</span><span>+91 99210 79337</span>
+    <a href="mailto:maheboobkhan18202@gmail.com">maheboobkhan18202@gmail.com</a>
+    <a href="https://www.linkedin.com/in/maheboob-khan-b220b5246">linkedin.com/in/maheboob-khan</a>
+    <a href="https://github.com/Maheboobkhan">github.com/Maheboobkhan</a>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p>Full-stack engineer with <b>3+ years</b> building and running production platforms end to end: React front-ends, PHP/Laravel and Node APIs, a <b>Go payment service</b>, a React Native app, self-hosted email infrastructure (<b>KumoMTA</b>) and AI agents. I own systems from database indexes and payment reconciliation to UI polish and monitoring.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <div><b>Languages:</b> JavaScript, TypeScript, PHP, Go, SQL, C++ &nbsp; <b>Frontend:</b> React, Next.js, Redux Toolkit, Tailwind, MUI, Framer Motion, PWA</div>
+  <div><b>Backend:</b> Node.js/Express, Go (chi), Laravel, plain PHP, WordPress plugins, REST, JWT, webhooks, cron workers</div>
+  <div><b>Mobile:</b> React Native, Expo, EAS &nbsp; <b>Data:</b> MySQL (indexing, transactions), MongoDB, Firebase &nbsp; <b>AI:</b> OpenAI, Gemini, Claude, OCR</div>
+  <div><b>Payments &amp; messaging:</b> Razorpay, Cashfree, Stripe, Amazon SES, SendGrid, KumoMTA, WhatsApp Cloud API, Pusher, Socket.io</div>
+  <div><b>Cloud &amp; DevOps:</b> AWS EC2/S3, Caddy, Nginx, PM2, systemd, Playwright, GitHub Actions, Vercel, Git</div>
+</div>
+
+<h2>Experience</h2>
+<div class="role"><span><b>Full-Stack Developer</b> | <span class="co">Internship Studio</span></span><span class="when">May 2025 – Present</span></div>
+<div class="sub">Ed-tech platform for internships, exams, training and hiring · Pune</div>
+<ul>
+  <li><b>Student dashboard</b> (<a href="https://dashboard.internshipstudio.com">dashboard.internshipstudio.com</a>): React + PHP/MySQL. Built the Campus Ambassador program, Global Internship checkout, AI resume autofill (OCR + LLM) and canvas-to-PDF certificates.</li>
+  <li><b>Payment service in Go</b>: rewrote the Node backend (Razorpay + Cashfree). Signed webhooks, a reconciler and status-page recovery all settle through one idempotent MySQL transaction, so paid students are never left un-enrolled.</li>
+  <li><b>Admin suite</b> (<a href="https://adp.internshipstudio.com">adp.internshipstudio.com</a>, 190+ screens): Netcore-style email/WhatsApp automation with provider failover and spend guardrails, a self-hosted <b>KumoMTA</b> panel (5 IPs, warm-up, health scoring), Caller IQ, an in-house helpdesk, LMS, task manager with a Slack app, and <b>AI agents</b> with budget caps.</li>
+  <li><b>Recruiter portal</b> (<a href="https://hire.internshipstudio.com">hire.internshipstudio.com</a>): AI job posting with Gemini; replaced N+1 candidate search with batched queries and covering indexes.</li>
+  <li><b>Mobile app v2</b> (<a href="https://play.google.com/store/apps/details?id=com.istudio.app">Play Store</a>): Expo/React Native rebuild with native payments, Pusher chat, deep links and attribution matching the website.</li>
+  <li><b>Synthetic monitoring</b>: Playwright on EC2 sits the exam and opens checkout every 15 min; throttled email/Slack alerts with screenshots.</li>
+</ul>
+
+<div class="role"><span><b>Full-Stack Developer</b> | <span class="co">Novacred Pvt Ltd</span></span><span class="when">Aug 2023 – Apr 2025</span></div>
+<div class="sub">RegTech / KYC · Laravel, React, MySQL</div>
+<ul>
+  <li><b>RegTech API</b> (<a href="https://regtechapi.in">regtechapi.in</a>): KYC and verification API platform with a React dashboard and a Laravel + MySQL backend.</li>
+  <li><b>CollectKart</b> (<a href="https://collectkart.docboyz.in">live</a>): collection and document-verification product; <b>Docboyz</b> app: DigiLocker sign-in for field agents.</li>
+</ul>
+
+<div class="role"><span><b>MERN Stack Developer</b> | <span class="co">Spring S Pvt Ltd</span></span><span class="when">Apr 2023 – Jul 2023</span></div>
+<ul>
+  <li>Built a MERN e-commerce app (admin CRUD, auth, Stripe checkout) and a Next.js marketing site (<a href="https://crimelookwithnextjs.vercel.app/">Crime Look</a>).</li>
+</ul>
+
+<h2>Freelance</h2>
+<ul>
+  <li><b>Avir Client Portal</b> (<a href="https://avirhealthpac.in">avirhealthpac.in</a>): custom WordPress plugin. Hospitals track licences and accreditations live; staff manage templates, steps, documents and payments; leads captured from 5 form plugins.</li>
+  <li><b>MM Capital</b> (<a href="https://mmcapital.in">mmcapital.in</a>): React 19 + Vite marketing site for an IPO/M&amp;A advisory, with CSS-only motion and per-route SEO.</li>
+</ul>
+
+<h2>Personal Projects</h2>
+<p><a href="https://myfirstcloneofnetflix.vercel.app">Netflix Clone</a> (React, TMDB) · <a href="https://easilychat.netlify.app">Easy Chat</a> (React, Node, Socket.io) · <a href="https://sortingwithreact.netlify.app">Sorting Visualizer</a> (React) · <a href="https://github.com/Maheboobkhan">more on GitHub</a></p>
+
+<h2>Education</h2>
+<div class="edu"><span><b>B.Tech, Computer Science</b> · KJ College of Engineering, Pune</span><span>2019 – 2023 · <b>CGPA 8.43</b></span></div>
+<div class="edu"><span><b>HSC (PCM)</b> · Moledina Junior College</span><span>2018</span></div>
+</body>
+</html>

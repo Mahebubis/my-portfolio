@@ -1,0 +1,77 @@
+{
+  "admin-panel": [
+    "ai-agents.webp",
+    "caller-iq-2.webp",
+    "caller-iq.webp",
+    "cover.webp",
+    "helpdesk-2.webp",
+    "helpdesk.webp",
+    "kumo-2.webp",
+    "kumo.webp",
+    "lms-2.webp",
+    "lms.webp",
+    "marketing-2.webp",
+    "marketing-3.webp",
+    "marketing-4.webp",
+    "marketing.webp",
+    "reports.webp",
+    "spend.webp",
+    "students.webp",
+    "tasks-2.webp",
+    "tasks.webp"
+  ],
+  "avir-client-portal": [
+    "admin-dashboard-2.webp",
+    "admin-dashboard-3.webp",
+    "admin-dashboard.webp",
+    "client-dashboard-2.webp",
+    "client-dashboard.webp",
+    "cover.webp",
+    "leads.webp",
+    "requirement-2.webp",
+    "requirement-3.webp",
+    "requirement.webp",
+    "templates-2.webp",
+    "templates.webp"
+  ],
+  "hire-portal": [
+    "cover.webp",
+    "post-job.webp"
+  ],
+  "learning-portal": [
+    "cover.webp",
+    "player.webp",
+    "quizzes.webp",
+    "support.webp"
+  ],
+  "mm-capital": [
+    "contact.webp",
+    "cover.webp",
+    "home.webp",
+    "services.webp"
+  ],
+  "mobile-app": [
+    "chat.webp",
+    "cover.webp",
+    "payments.webp",
+    "push.webp",
+    "tabs.webp"
+  ],
+  "student-dashboard": [
+    "campus-ambassador.webp",
+    "career-roadmap.webp",
+    "cit-exam.webp",
+    "cover.webp",
+    "hiring.webp",
+    "internship-allocation.webp",
+    "payments.webp",
+    "profile.webp",
+    "projects-certificates.webp",
+    "skills.webp",
+    "training.webp"
+  ],
+  "synthetic-monitoring": [
+    "cover.webp",
+    "history.webp"
+  ]
+}

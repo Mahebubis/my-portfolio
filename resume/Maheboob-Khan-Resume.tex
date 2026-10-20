@@ -1,0 +1,185 @@
+% ===================================================================
+%  Maheboob Khan — Résumé (2 pages)
+%  Compile on Overleaf with pdfLaTeX. Uses only standard packages.
+% ===================================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[left=0.6in,right=0.6in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}           % clean sans-serif
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- colours (navy + teal, matches the portfolio) ----------
+\definecolor{navy}{HTML}{0F172A}
+\definecolor{teal}{HTML}{0E7490}
+\definecolor{muted}{HTML}{64748B}
+\color{navy}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+
+% ---------- section style ----------
+\titleformat{\section}{\large\bfseries\color{teal}\MakeUppercase}{}{0em}{}[\vspace{-7pt}{\color{teal!35}\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+% ---------- lists ----------
+\setlist[itemize]{leftmargin=1.05em, itemsep=1.2pt, parsep=0pt, topsep=2pt, label={\color{teal}\scriptsize$\blacktriangleright$}}
+
+% ---------- helpers ----------
+\newcommand{\link}[2]{\href{#1}{\color{teal}#2}}
+% \job{Role}{Company}{Dates}{Subtitle}
+\newcommand{\job}[4]{%
+  \textbf{\large #1} \,|\, \textbf{\color{teal}#2} \hfill {\small\color{muted}#3}\\[-1pt]
+  {\small\color{muted}#4}\vspace{1pt}}
+% \proj{Name}{link}{one-liner}
+\newcommand{\proj}[3]{\textbf{#1} {\small(#2)} --- #3}
+% \skill{Group}{items}
+\newcommand{\skill}[2]{\textbf{#1:} & #2 \\}
+
+\begin{document}
+
+% =================================================================== HEADER
+\begin{center}
+  {\Huge\bfseries KHAN MAHEBOOB}\\[3pt]
+  {\large\color{teal} Full-Stack Engineer \,·\, React · PHP · Go · Node.js · React Native}\\[5pt]
+  {\small
+  \faMapMarker*\ Pune, Maharashtra \quad
+  \faPhone\ +91 99210 79337 \quad
+  \faEnvelope\ \href{mailto:maheboobkhan18202@gmail.com}{maheboobkhan18202@gmail.com} \quad
+  \faLinkedin\ \link{https://www.linkedin.com/in/maheboob-khan-b220b5246}{linkedin.com/in/maheboob-khan} \quad
+  \faGithub\ \link{https://github.com/Maheboobkhan}{github.com/Maheboobkhan}}\\[3pt]
+  {\small \faGlobe\ \textbf{Portfolio with live demos \& test logins:} \link{https://YOUR-PORTFOLIO-URL}{YOUR-PORTFOLIO-URL}}
+\end{center}
+\vspace{-6pt}
+
+% =================================================================== SUMMARY
+\section{Summary}
+Full-stack engineer with \textbf{3+ years} of experience building and running production platforms end to end.
+At Internship Studio I own large parts of an ed-tech ecosystem: the React student dashboard and its PHP APIs, a
+\textbf{Go payment service} (Razorpay + Cashfree) that settles every payment exactly once, a Node.js exam engine,
+a recruiter portal, a 190-screen \textbf{admin suite} (marketing automation, self-hosted \textbf{KumoMTA}, helpdesk,
+LMS, task manager, \textbf{AI agents}), the React Native app and a Playwright synthetic monitor on AWS.
+Earlier: Laravel + React API products at a RegTech company and MERN work at an agency; freelance WordPress and React projects.
+
+% =================================================================== SKILLS
+\section{Technical Skills}
+{\small
+\begin{tabularx}{\linewidth}{@{}p{3.3cm}X@{}}
+\skill{Languages}{JavaScript (ES2023), TypeScript, PHP 8, Go, SQL, C++, HTML, CSS}
+\skill{Frontend}{React 18/19, Next.js, Vite, Redux Toolkit, React Router, Tailwind CSS, MUI, Framer Motion, Formik/Yup, React Hook Form, Recharts, GrapesJS, Monaco Editor, PWA / Service Workers}
+\skill{Mobile}{React Native 0.83, Expo SDK 55, Expo Router, EAS Build \& Submit, Firebase Cloud Messaging, App Links / Universal Links}
+\skill{Backend}{Node.js / Express, Go (chi, database/sql, slog), Laravel, plain PHP APIs, WordPress plugins, REST, JWT, webhooks (HMAC), cron workers, IMAP/SMTP}
+\skill{Databases}{MySQL (indexing, query tuning, transactions, savepoints, GET\_LOCK queues), MongoDB, Firebase}
+\skill{Payments \& messaging}{Razorpay, Cashfree, Stripe, Amazon SES, SendGrid, Elastic Email, KumoMTA, WhatsApp Cloud API, Pusher, Socket.io, Slack API}
+\skill{AI \& data}{OpenAI, Gemini, Claude, DeepSeek, Google Document AI, Tesseract.js OCR, pdf.js, face-api.js}
+\skill{Cloud \& DevOps}{AWS EC2 (x86 \& Graviton) \& S3, Google Cloud (Document AI, Vision), Caddy (auto-TLS), Nginx, Apache, PM2, systemd, Playwright, GitHub Actions, Vercel, Netlify, cPanel, Linux, Git}
+\skill{Analytics}{Meta Conversions API, Meta Custom Audiences, Google Tag Manager, UTM / click-id attribution}
+\end{tabularx}}
+
+% =================================================================== EXPERIENCE
+\section{Experience}
+
+\job{Full-Stack Developer}{Internship Studio}{May 2025 -- Present}{Ed-tech platform for internships, aptitude exams, training and hiring \,·\, Pune}
+
+\textbf{Student Dashboard} \,·\, \link{https://dashboard.internshipstudio.com}{dashboard.internshipstudio.com} \,·\, {\small React 18, Redux, PHP 8, MySQL}
+\begin{itemize}
+  \item Built student features: \textbf{Campus Ambassador} program (canvas-drawn poster, PDF offer letter, wallet, leaderboard, UPI withdrawals, live updates over Pusher),
+        \textbf{Global Internship} guest checkout, internship allocation, training \& Skill Lab, skill tests with a code editor and canvas-to-PDF certificates.
+  \item \textbf{AI resume autofill}: pdf.js text extraction with Tesseract OCR fallback, then LLM parsing into profile fields; face check on profile photos.
+  \item Ad attribution (UTM / fbclid / gclid first-party cookie) and server-side \textbf{Meta Conversions API} with event ids that de-duplicate against the pixel.
+\end{itemize}
+
+\textbf{Payment Service (Go)} \,·\, {\small Go 1.22, chi, MySQL, Razorpay, Cashfree, PM2, Caddy on AWS EC2}
+\begin{itemize}
+  \item Rewrote the Node.js payment backend in \textbf{Go} ($\approx$14k lines; 59 of 64 commits): server-side price quotes, four checkout flows, signed webhooks for both gateways.
+  \item Browser confirm, webhooks and a 5-minute \textbf{reconciler} all settle through one idempotent MySQL transaction, so every payment is applied \textbf{exactly once};
+        recovered UPI-intent and closed-tab payments that used to leave paid students un-enrolled.
+  \item Per-order locks, detached contexts so a closed tab can't abort enrolment, rewards inside a SAVEPOINT, graceful shutdown and rollback-ready binary deploys.
+\end{itemize}
+
+\textbf{CIT Exam Platform} \,·\, {\small React, Node.js / Express, MySQL}
+\begin{itemize}
+  \item 30-minute timed aptitude exam with stratified random papers, a server-anchored resumable timer, tab-switch anti-cheat and transactional scoring;
+        launched from the dashboard with one-time hash sign-on; StartExam / ExamEnd events for Meta CAPI.
+\end{itemize}
+
+\textbf{Admin Suite} \,·\, \link{https://adp.internshipstudio.com}{adp.internshipstudio.com} \,·\, {\small React 19, Vite 8, Tailwind 4, PHP 8.3, MySQL --- $\sim$200 routes}
+\begin{itemize}
+  \item \textbf{Email \& WhatsApp marketing platform} (built in-house): behaviour analytics, segments, lists, email campaigns on SES / SendGrid / Elastic Email with automatic
+        \textbf{provider failover}, WhatsApp campaigns + live inbox (Meta Cloud API), and a visual \textbf{journey builder}.
+  \item \textbf{Spend control}: hard per-batch caps and an anomaly watchdog (14-day median, hourly burn rate) after a runaway job burned 200k credits in 40 minutes.
+  \item \textbf{KumoMTA panel} for our self-hosted email server: 5 sending IPs, warm-up ladder, red/yellow/green IP health with auto-pause, blocklist and Postmaster checks.
+  \item \textbf{Caller IQ} (Kotlin + React Native agent reading Android call logs) for counsellor analytics; an in-house \textbf{helpdesk \& ticketing} system
+        (IMAP sync, SLA clocks, automation rules); \textbf{LMS}; \textbf{Task Manager} with a Slack app and Google Calendar sync.
+  \item \textbf{AI Agents}: workflow engine and daily AI stand-ups on OpenAI / Claude / DeepSeek with read-only connectors, cost logging and a daily budget stop.
+  \item OTP + JWT login with per-page permissions checked live on the server; MySQL-table job queues with atomic claims and GET\_LOCK; read-only demo mode.
+\end{itemize}
+
+\textbf{Deployment \& Infrastructure} \,·\, {\small AWS EC2 / S3, Google Cloud, Caddy, PM2, systemd, Apache}
+\begin{itemize}
+  \item Owned deployments end to end: provisioned and hardened \textbf{AWS EC2} Linux servers (x86 and Graviton) for the Go payment service, Node exam API,
+        background workers and the synthetic monitor; \textbf{Caddy} with automatic HTTPS, \textbf{PM2} and \textbf{systemd} services, cron workers and log rotation.
+  \item Files on \textbf{AWS S3}; resume parsing on \textbf{Google Cloud} Document AI / Vision; web builds and PHP APIs on Apache / cPanel; SSL and DNS.
+  \item Safe releases: compiled-binary swaps with a kept rollback copy, timestamped backups before every deploy, and production alerting by email and Slack.
+\end{itemize}
+
+\textbf{Recruiter Portal} \,·\, \link{https://hire.internshipstudio.com}{hire.internshipstudio.com} \,·\, {\small React, PHP, MySQL, Gemini, Pusher}
+\begin{itemize}
+  \item AI job posting with Gemini, applications pipeline, real-time recruiter--student chat; rebuilt candidate search (3N+1 queries $\rightarrow$ 4 batched queries, covering indexes).
+\end{itemize}
+
+\textbf{Learning Portal, Mobile App \& Monitoring}
+\begin{itemize}
+  \item \textbf{Learning portal} (\link{https://training.internshipstudio.com}{training.internshipstudio.com}): video player for MP4 / HLS / Vimeo / Bunny, quizzes, notes, support desk, HMAC-signed SSO from the dashboard.
+  \item \textbf{Mobile app v2} (\link{https://play.google.com/store/apps/details?id=com.istudio.app}{Google Play}): full Expo / React Native rebuild with native Razorpay \& Cashfree, Pusher chat, FCM push, deep links and attribution matching the website.
+  \item \textbf{Synthetic monitoring}: Playwright on AWS EC2 (systemd) registers, sits the exam and opens checkout every 15 minutes; throttled email $\rightarrow$ Slack alerts with screenshots.
+\end{itemize}
+
+\job{Full-Stack Developer}{Novacred Pvt Ltd}{Aug 2023 -- Apr 2025}{RegTech / KYC company \,·\, Laravel, React, MySQL}
+\begin{itemize}
+  \item \textbf{RegTech API} (\link{https://regtechapi.in}{regtechapi.in}): KYC and verification API platform with a React client dashboard and a Laravel + MySQL backend.
+  \item \textbf{CollectKart} (\link{https://collectkart.docboyz.in}{collectkart.docboyz.in}): collection and document-verification product built in Laravel (frontend and backend).
+  \item \textbf{Docboyz} field-agent app (\link{https://docboyz.in}{docboyz.in}): integrated \textbf{DigiLocker} for verified agent sign-in; optimised Laravel services and API integrations.
+\end{itemize}
+
+\job{MERN Stack Developer}{Spring S Pvt Ltd}{Apr 2023 -- Jul 2023}{Agency \,·\, React, Next.js, Node.js, MongoDB}
+\begin{itemize}
+  \item Full \textbf{MERN e-commerce} app (\link{https://test-final-afte.onrender.com/}{live}): admin CRUD, authentication, cart and Stripe checkout, fully responsive.
+  \item \textbf{Crime Look} marketing website in Next.js with AOS scroll animations (\link{https://crimelookwithnextjs.vercel.app/}{live}).
+\end{itemize}
+
+% =================================================================== FREELANCE
+\section{Freelance Projects}
+\begin{itemize}
+  \item \textbf{Avir Client Portal} --- custom WordPress plugin for \link{https://avirhealthpac.in}{avirhealthpac.in} (healthcare compliance consultancy).
+        Client portal to track licences and accreditations live; full-screen admin app with onboarding wizard, form \& step templates, documents,
+        payments, updates and lead capture from 5 form plugins. PHP, custom \$wpdb tables, private file storage, login lockout.
+  \item \textbf{MM Capital} --- \link{https://mmcapital.in}{mmcapital.in}: React 19 + Vite marketing site for an IPO / M\&A advisory with CSS-only motion,
+        per-route SEO and structured data.
+\end{itemize}
+
+% =================================================================== PERSONAL
+\section{Personal Projects}
+{\small
+\link{https://myfirstcloneofnetflix.vercel.app}{\textbf{Netflix Clone}} (React, TMDB, YouTube trailers) \,·\,
+\link{https://easilychat.netlify.app}{\textbf{Easy Chat}} (React, Node, Express, Socket.io rooms) \,·\,
+\link{https://sortingwithreact.netlify.app}{\textbf{Sorting Visualizer}} (React, algorithm animations) \,·\,
+\link{https://aulacube.netlify.app}{\textbf{ToDo App}} (React CRUD) \,·\,
+\link{https://github.com/Maheboobkhan}{more on GitHub}}
+
+% =================================================================== EDUCATION
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{B.Tech in Computer Science} --- KJ College of Engineering, Pune & 2019 -- 2023 \,·\, \textbf{CGPA 8.43}\\
+\textbf{HSC (PCM)} --- Moledina Junior College, Maharashtra & 2018\\
+\end{tabularx}
+
+\end{document}
